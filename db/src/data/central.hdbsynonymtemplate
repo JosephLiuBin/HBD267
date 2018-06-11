@@ -2,7 +2,7 @@
   "Addresses": {
     "target": {
       "grantor" : "hdi-central-service",
-      "object" : "MD.Addresses" 
+      "object" : "MD.Addresses"
      }
   },
     "BusinessPartners": {
