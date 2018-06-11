@@ -1,0 +1,20 @@
+{
+  "Addresses": {
+    "target": {
+      "object": "MD.Addresses",
+      "schema": "TECHED_2017_1"
+    }
+  },
+  "Products": {
+    "target": {
+      "object": "core.models::PRODUCTS",
+      "schema": "TECHED_2017_1"
+    }
+  },
+  "BusinessPartners": {
+    "target": {
+      "object": "MD.BusinessPartner",
+      "schema": "TECHED_2017_1"
+    }
+  }
+}
