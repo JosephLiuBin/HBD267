@@ -3,7 +3,7 @@
     "name": "admin",
     "schema_privileges": [
       {
-        "privileges": [
+        "privileges": [121
           "SELECT METADATA",
           "SELECT CDS METADATA",
           "SELECT",
