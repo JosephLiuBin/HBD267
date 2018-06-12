@@ -1,0 +1,36 @@
+{
+	"xsappname": "HBD267",
+	"scopes": [
+		{
+			"name": "$XSAPPNAME.Display", 
+			"description": "Display data" 
+		},
+		{
+			"name": "$XSAPPNAME.Create",
+			"description": "Create data"
+		},
+		{
+			"name": "$XSAPPNAME.Delete",
+			"description": "Delete data"
+		}
+		],
+	"role-templates": [
+		{
+			"name": "hbd267View",
+			"description": "Role for viewing data",
+			"scope-references": [ "$XSAPPNAME.Display"]
+			
+		},
+		{
+			"name": "hdb267Create",
+			"description": "Role for creating data",
+			"scope-references": [ "$XSAPPNAME.Create", "$XSAPPNAME.Display"]
+		},
+		{
+			"name": "hdb267Delete",
+			"description": "Role for deleting data",
+			"scope-references": [ "$XSAPPNAME.Delete", "$XSAPPNAME.Display"]
+		}
+		]
+	
+}

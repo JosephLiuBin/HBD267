@@ -8,6 +8,12 @@ modules:
     path: web
     requires:
       - name: hbd267-uaa
+      - name: js_api
+        group: destinations
+        properties:
+          name: js_api
+          url: '~{url}'
+          forwardAuthToken: true
   - name: db
     type: hdb
     path: db
@@ -25,9 +31,22 @@ modules:
         properties:
           key: hdi-central-service
           service: '~{central-db-name}'
+  - name: js
+    type: nodejs
+    path: js
+    provides:
+      - name: js_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: hdi_db
+      - name: hbd267-uaa
+      - name: db
 resources:
   - name: hbd267-uaa
     type: com.sap.xs.uaa-space
+    parameters:
+      config-path: ./xs-security.json
   - name: hdi_db
     parameters:
       config:
